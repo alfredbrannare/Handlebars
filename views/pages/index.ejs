@@ -1,7 +1,18 @@
 <%- include('../partials/header'); %>
   <section class="movies">
     <h2 class="movies__header">FILMER PÅ KINO</h2>
-    <ul class="movies__list"></ul>
+    <ul class="movies__list">
+      <% moviesData.forEach((item) => { %>
+        <li class="movie__list-item">
+          <a href="/movie/<%= item.id %>">
+            <article class="movie-card">
+              <img src="<%= item.attributes.image.url %>" class="movie-card__image" alt="Omslag för filmen <%= item.attributes.title %>">
+              <h3 class="movie-card__title"><%= item.attributes.title %></h3>
+            </article>
+          </a>
+          </li>
+      <% }) %>
+    </ul>
     <div class="movies__actions">
       <a href="#" class="movies__actions-bookTicket" aria-label="Book moive tickets now">BOKA BILJETT</a>
       <a href="movies.html" class="movies__actions-seeAll" aria-label="See all movies">SE ALLA FILMER</a>
