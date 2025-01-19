@@ -832,14 +832,16 @@
   align-items: center;
   height: 100vh;
   font-size: 2rem;
+  padding: 0 1rem;
 }
 .error__container h1,
 .error__container p {
   color: #dcdcdc;
   margin: 1rem;
+  text-align: center;
 }
 .error__container a {
-  padding: 8px 24px;
+  padding: 0.5rem 1.5rem;
   color: #dcdcdc;
   background-color: transparent;
   border: 3px solid #dcdcdc;
