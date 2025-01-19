@@ -12,6 +12,7 @@
 @use '_tagline';
 @use '_all_movie';
 @use '_specific_movie';
+@use 'error.scss';
 
 * {
   margin: 0;

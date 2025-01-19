@@ -30,6 +30,11 @@ app.get('/movie/:movieId', async (req, res) => {
 
 app.use('/static', express.static('./static'));
 
+app.use((req, res) => {
+  const linkData = navLinks();
+  res.status(404).render('pages/error', { message: 'Page not found', ...linkData });
+});
+
 const PORT = process.env.PORT || 5080;
 app.listen(5080, () => {
   console.log(`Server running on http://localhost:${PORT}`);

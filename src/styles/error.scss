@@ -1,0 +1,23 @@
+.error__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 2rem;
+
+  h1,
+  p {
+    color: #dcdcdc;
+    margin: 1rem;
+  }
+
+  a {
+    padding: 8px 24px;
+    color: #dcdcdc;
+    background-color: transparent;
+    border: 3px solid #dcdcdc;
+    text-decoration: none;
+    margin: 0 0.5rem;
+  }
+}
