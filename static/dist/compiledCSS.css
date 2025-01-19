@@ -796,6 +796,35 @@
 .moviesSecond__list__elem__rating {
   font-weight: 700;
 }
+.specific__movie {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 1rem;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.specific__movie img {
+  width: 25rem;
+  object-fit: contain;
+  border: 3px solid #dcdcdc;
+}
+.specific__movie div {
+  background-color: #fff;
+  border-radius: 0.2rem;
+  border: 3px solid #dcdcdc;
+  padding: 1rem;
+  min-width: 67%;
+  max-width: 67%;
+}
+.specific__movie div h3 {
+  font-size: 4rem;
+}
+.specific__movie div p {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
 * {
   margin: 0;
   padding: 0;
