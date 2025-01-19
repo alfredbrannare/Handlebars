@@ -8,6 +8,7 @@
   gap: 1rem;
   justify-content: center;
   margin: 1rem 0;
+  flex-wrap: wrap;
 
   img {
     width: 25rem;
@@ -30,6 +31,32 @@
     p {
       font-size: 2rem;
       margin: 1rem 0;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .specific__movie {
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 100%;
+      max-width: 25rem;
+    }
+
+    div {
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+    }
+
+    div h3 {
+      font-size: 3.5rem;
+    }
+
+    div p {
+      font-size: 1.8rem;
     }
   }
 }
