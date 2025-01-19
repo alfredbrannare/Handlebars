@@ -4,7 +4,7 @@
     <img class="movie-card__image" src="<%= movieData.attributes.image.url %>" alt="Omslag för filmen <%= movieData.attributes.title %>">
     <div class="specific__movie-information">
         <h3 class="movie__title"><%= movieData.attributes.title %></h3>
-        <p class="movie__intro"><%= movieData.attributes.intro %></p>
+        <p class="movie__intro"><%- formatMarkdown(movieData.attributes.intro) %></p>
     </div>
 </section>
 

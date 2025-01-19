@@ -3,9 +3,11 @@ import ejs from 'ejs';
 import navLinks from './src/js/server/navLinks.js';
 import { fetchAllMovies } from './src/js/server/fetchMovies.js';
 import { fetchMovie } from './src/js/server/fetchMovies.js';
+import { marked } from 'marked';
 
 const app = express();
 
+app.locals.formatMarkdown = (text) => marked(text);
 app.set('view engine', 'ejs');
 
 app.get('/', async (req, res) => {
