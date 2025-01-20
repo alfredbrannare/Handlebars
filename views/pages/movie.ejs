@@ -1,10 +1,10 @@
 <%- include('../partials/header'); %>
 
 <section class="specific__movie">
-    <img class="movie-card__image" src="<%= movieData.attributes.image.url %>" alt="Omslag för filmen <%= movieData.attributes.title %>">
+    <img class="movie-card__image" src="<%= movieData.image.url %>" alt="Omslag för filmen <%= movieData.title %>">
     <div class="specific__movie-information">
-        <h3 class="movie__title"><%= movieData.attributes.title %></h3>
-        <p class="movie__intro"><%- formatMarkdown(movieData.attributes.intro) %></p>
+        <h3 class="movie__title"><%= movieData.title %></h3>
+        <p class="movie__intro"><%- formatMarkdown(movieData.intro) %></p>
     </div>
 </section>
 
