@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/static/dist/compiledCSS.css">
+  <title>Kino-bio-page</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="navigation__mobile">
+      <a href="/kino-bio-projekt/index.html">
+        <div class="header__logo"></div>
+      </a>
+      <button class="hamburger" aria-label="Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+    <ul class="hamburger__items">
+      <button class="hamburger__close"></button>
+      {{#each headerData}}
+        <li class="hamburger__list">
+          <a href="/{{this.link}}">{{this.label}}</a>
+        </li>
+        {{/each}}
+    </ul>
+
+    <a href="/">
+      <div class="header__logo"></div>
+    </a>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        {{#each headerData}}
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="/{{this.link}}">{{this.label}}</a>
+        </li>
+        {{/each}}
+      </ul>
+    </nav>
+    <a class="header__bookTicket" aria-label="Book tickets now">
+      <button class="header__BookTicket-button">BOKA BILJETT</button>
+    </a>
+  </header>
+  {{{body}}}
+  <div class="line-container">
+    <div class="horizontal-line"></div>
+  </div>
+  <footer class="footer">
+    <div class="footer__section">
+      <h2 class="footer__heading">OM OSS</h2>
+      <ul class="footer__list">
+        {{#each footerSection1}}
+        <li class="footer__item">
+          <a class="footer__link" href="/{{this.link}}">{{this.label}}</a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+    <div class="footer__section">
+      <h2 class="footer__heading">BIOUPPLEVELSER</h2>
+      <ul class="footer__list">
+        {{#each footerSection2}}
+        <li class="footer__item">
+          <a class="footer__link" href="/{{this.link}}">{{this.label}}</a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+    <div class="footer__section">
+      <h2 class="footer__heading">SOCIALT</h2>
+      <ul class="footer__list">
+        {{#each footerSection3}}
+        <li class="footer__item">
+          <a class="footer__link" href="/{{this.link}}">{{this.label}}</a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </footer>
+
+  <script src="/static/dist/compiledJS.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<section class="movies">
+  <h2 class="movies__header">FILMER PÅ KINO</h2>
+  <ul class="movies__list">
+    {{#each moviesData}}
+      <li class="movie__list-item">
+        <a href="/movie/{{this.id}}">
+          <article class="movie-card">
+            <img src="{{this.image.url}}" class="movie-card__image" alt="Omslag för filmen {{this.title}}">
+            <h3 class="movie-card__title">{{this.title}}</h3>
+          </article>
+        </a>
+      </li>
+    {{/each}}
+  </ul>
+</section>
+
+<section class="live">
+  <h2 class="live__header">LIVE PÅ KINO</h2>
+  <ul class="live__list"></ul>
+  <div class="live__actions">
+    <a href="#" class="live__actions-bookTicket" aria-label="Book live tickets now">BOKA BILJETT TILL LIVE-EVENT</a>
+    <a href="#" class="live__actions-seeAll" aria-label="See all live-events">SE ALLA LIVE-EVENT</a>
+  </div>
+</section>
+
+<section class="tagline">
+  <h2 class="tagline__heading">KINO - EN ALLDELES SPECIELL BIOUPPLEVELSE</h2>
+  <p class="tagline__subheading">AV FILMÄLSKARE - FÖR FILMÄLSKARE</p>
+</section>
+
+<section class="buttons_membership_events">
+  <button class="membership">BLI MEDLEM</button>
+  <button class="events">EVENEMANG</button>
+</section>
