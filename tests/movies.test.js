@@ -1,6 +1,5 @@
 import { expect, test } from '@jest/globals';
 import request from 'supertest';
-import { fetchAllMovies, fetchMovie } from '../src/js/server/fetchMovies.js';
 import startApp from '../src/js/server/app.js';
 
 test('Home page shows list of movies and navigation links', async () => {
