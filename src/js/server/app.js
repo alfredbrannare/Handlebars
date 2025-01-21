@@ -18,13 +18,13 @@ function startApp(api, nav) {
 
       if (!moviesData || !linkData) {
         console.error('Data is missing or malformed');
-        return res.status(500).send('Internal Server Error');
+        return res.status(500).send('Movies or Links data is missing or malformed');
       }
 
       res.render('pages/index', { moviesData, ...linkData });
     } catch (error) {
       console.error('Error fetching data:', error);
-      res.status(500).send('Internal Server Error');
+      res.status(500).send('Error occurred while fetching data from API or navLinks');
     }
   });
 
