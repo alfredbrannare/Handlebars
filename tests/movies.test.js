@@ -34,6 +34,8 @@ test('Home page shows list of movies and navigation links', async () => {
 
   const response = await request(app).get('/').expect('Content-Type', /html/).expect(200);
 
+  console.log(response.text);
+
   expect(response.text).toMatch('Pulp Fiction');
   expect(response.text).toMatch('Fire Walk With Me');
   expect(response.text).toMatch('Isle of Dogs');

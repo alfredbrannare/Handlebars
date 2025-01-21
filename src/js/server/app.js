@@ -9,9 +9,23 @@ function startApp(api, nav) {
   app.set('view engine', 'ejs');
 
   app.get('/', async (req, res) => {
-    const linkData = await nav.navLinks();
-    const moviesData = await api.fetchAllMovies();
-    res.render('pages/index', { moviesData, ...linkData });
+    try {
+      const linkData = await nav.navLinks();
+      const moviesData = await api.fetchAllMovies();
+
+      console.log('Movies Data:', moviesData);
+      console.log('Link Data:', linkData);
+
+      if (!moviesData || !linkData) {
+        console.error('Data is missing or malformed');
+        return res.status(500).send('Internal Server Error');
+      }
+
+      res.render('pages/index', { moviesData, ...linkData });
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      res.status(500).send('Internal Server Error');
+    }
   });
 
   app.get('/movies', async (req, res) => {
